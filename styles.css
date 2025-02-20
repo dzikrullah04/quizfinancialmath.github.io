@@ -24,9 +24,17 @@ body {
 }
 .card {
     text-align: left;
-    min-width: 250px;
-    max-width: 350px;
-    width: 100R;
+    flex: 1 1 300px; /* Card akan mengatur lebarnya sendiri, min 300px */
+    max-width: 400px; /* Batasi ukuran maksimal agar tidak terlalu besar */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Agar tombol tetap di bawah */
+}
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Agar card bisa turun ke bawah saat layar mengecil */
+    justify-content: center; /* Agar selalu di tengah */
+    gap: 20px; /* Jarak antar card */
 }
 h1 {
     color: #333;
@@ -62,3 +70,9 @@ button:hover {
 .card {
 
 }
+@media (max-width: 768px) {
+    .card {
+      flex-basis: 100%; /* Agar di mobile card selalu bertumpuk */
+      margin-bottom: 20px;
+    }
+  }
