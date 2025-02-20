@@ -11,12 +11,20 @@ body {
 .container {
     text-align: center;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 20vh;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: row;
+    gap: 20px;
+    align-items: stretch;
 }
-
+.card {
+    text-align: left;
+}
 h1 {
     color: #333;
 }
@@ -47,4 +55,7 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+.card {
+
 }
